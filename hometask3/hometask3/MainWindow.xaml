@@ -1,0 +1,19 @@
+﻿<Window x:Class="hometask3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hometask3"
+        mc:Ignorable="d"
+        Title="Шифр Виженера" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="textUC" Margin="10,56,10,299" TextWrapping="Wrap"/>
+        <Label Content="Шифруемый текст:" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="31" Width="274"/>
+        <Label Content="Ключ:&#xD;&#xA;(должен содержать только символы кириллицы или только символы латиницы)" HorizontalAlignment="Left" Margin="10,0,0,250" Width="772" Height="44" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="KeyWord" Margin="10,0,10,222" TextWrapping="Wrap" Height="23" VerticalAlignment="Bottom"/>
+        <Label Content="Зашифрованный текст:&#xD;&#xA;(Шифруются только те части текста (буквы), которые совпадают с языком ключа; регистр сохраняется)" HorizontalAlignment="Left" Margin="10,0,0,128" Width="772" Height="43" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="textC" Margin="10,0,10,34" TextWrapping="Wrap" IsReadOnlyCaretVisible="True" Height="75" VerticalAlignment="Bottom"/>
+        <Button x:Name="button" Content="Зашифровать" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click"/>
+
+    </Grid>
+</Window>
