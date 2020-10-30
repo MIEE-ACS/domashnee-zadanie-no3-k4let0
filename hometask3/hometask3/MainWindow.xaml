@@ -7,13 +7,18 @@
         mc:Ignorable="d"
         Title="Шифр Виженера" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="textUC" Margin="10,56,10,299" TextWrapping="Wrap"/>
-        <Label Content="Шифруемый текст:" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="31" Width="274"/>
-        <Label Content="Ключ:&#xD;&#xA;(должен содержать только символы кириллицы или только символы латиницы)" HorizontalAlignment="Left" Margin="10,0,0,250" Width="772" Height="44" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="KeyWord" Margin="10,0,10,222" TextWrapping="Wrap" Height="23" VerticalAlignment="Bottom"/>
-        <Label Content="Зашифрованный текст:&#xD;&#xA;(Шифруются только те части текста (буквы), которые совпадают с языком ключа; регистр сохраняется)" HorizontalAlignment="Left" Margin="10,0,0,128" Width="772" Height="43" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="textC" Margin="10,0,10,34" TextWrapping="Wrap" IsReadOnlyCaretVisible="True" Height="75" VerticalAlignment="Bottom"/>
-        <Button x:Name="button" Content="Зашифровать" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click"/>
+        <TextBox x:Name="textUC" Margin="10,46,10,309" TextWrapping="Wrap"/>
+        <Label Content="Текст:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="31" Width="274"/>
+        <Label Content="Ключ:&#xD;&#xA;(должен содержать только символы кириллицы или только символы латиницы)" HorizontalAlignment="Left" Margin="10,0,0,260" Width="772" Height="44" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="KeyWord" Margin="10,0,10,232" TextWrapping="Wrap" Height="23" VerticalAlignment="Bottom"/>
+        <Label Content="Результат:&#xA;(Шифруются/расшифровываются только те части текста (буквы), которые совпадают с языком ключа; регистр сохраняется)" HorizontalAlignment="Left" Margin="10,0,0,114" Width="772" Height="43" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="textC" Margin="10,0,10,34" TextWrapping="Wrap" Height="75" VerticalAlignment="Bottom" IsReadOnlyCaretVisible="True"/>
+        <Button x:Name="button" Content="Выполнить" HorizontalAlignment="Left" Margin="213,0,0,162" VerticalAlignment="Bottom" Width="105" Click="Button_Click"/>
+        <ComboBox x:Name="operation" HorizontalAlignment="Left" Margin="10,0,0,162" VerticalAlignment="Bottom" Width="120">
+            <ComboBoxItem Content="Зашифровать"/>
+            <ComboBoxItem Content="Расшифровать"/>
+        </ComboBox>
+        <Label Content="Операция" Margin="10,0,10,189" RenderTransformOrigin="-0.842,-0.077" Height="29" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>
